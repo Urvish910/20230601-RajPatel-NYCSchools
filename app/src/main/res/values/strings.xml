@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">20230601-RajPatel-NYCSchools</string>
+    <string name="tv_title">NYC Schools</string>
+    <string name="text_text">This is just a test</string>
+    <string name="btn_info">Info</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="school_sat_score">School SAT Score</string>
 </resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.a20230601_rajpatel_nycschools.data.SatResponseItem" />
+    </data>
+
+
+
+    <LinearLayout
+        android:background="#AD95A2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.SatSchoolFragment"
+        android:padding="15dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_title"
+                android:text="@string/school_sat_score"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_dbn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{data.dbn}"
+            />
+        <TextView
+            android:id="@+id/tv_schoolName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{"School Name = "+data.school_name}'
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/tv_satTakers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{"Total Sat Takers = "+data.num_of_sat_test_takers}'
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/tv_satReadingavg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{"AVG Reading Score = "+data.sat_critical_reading_avg_score}'
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/tv_mathavg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{"AVG Math Score = "+data.sat_math_avg_score}'
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/tv_writingavg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{"AVG Writing Score = "+data.sat_writing_avg_score}'
+            android:layout_marginTop="10dp"/>
+
+        <ProgressBar
+            android:id="@+id/pb_satl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+</layout>
